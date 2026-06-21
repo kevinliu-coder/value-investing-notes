@@ -656,13 +656,13 @@ main{flex:1;padding:40px 48px 120px;max-width:900px;overflow-y:auto;height:100vh
 </main>
 
 <div class="ai-panel" id="ai-panel">
-  <div class="ai-header"><h3>🤖 投资问答</h3><button onclick="toggleAI()">✕</button></div>
+  <div class="ai-header"><h3>🤖 投资问答</h3><div style="display:flex;align-items:center;gap:6px"><input type="password" id="api-key" placeholder="DeepSeek API Key" style="width:130px;background:#0d1117;border:1px solid var(--bd);border-radius:4px;padding:3px 6px;color:var(--tx);font-size:10px;font-family:monospace" onchange="saveKey()"><span id="key-status" style="font-size:10px;color:#484f58"></span></div><button onclick="toggleAI()" style="margin-left:6px;flex-shrink:0">✕</button></div>
   <div class="ai-chat" id="ai-chat">
-    <div style="padding:10px;color:#8b949e;font-size:12px">问我任何投资问题 — 基于9本书的知识库回答。例如：<br>"什么是安全边际？"<br>"段永平怎么看估值？"<br>"市场先生是什么意思？"</div>
+    <div style="padding:10px;color:#8b949e;font-size:12px">输入 API Key (<a href="https://platform.deepseek.com" target="_blank" style="color:var(--ac)">获取</a>) 后开始对话。</div>
   </div>
   <div class="ai-input-wrap">
     <textarea id="ai-input" placeholder="输入你的问题..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();askAI()}"></textarea>
-    <button onclick="askAI()">发送</button>
+    <button onclick="askAI()" id="ai-send-btn">发送</button>
   </div>
 </div>
 
