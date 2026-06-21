@@ -724,8 +724,7 @@ async function askAI() {
     var r = await fetch(API_URL, {method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY}, body:JSON.stringify({model:API_MODEL, messages:[{role:'system',content:AI_SYSTEM},{role:'user',content:q}], temperature:0.7, max_tokens:2000})});
     if (!r.ok) { var e = await r.json().catch(function(){return{};}); throw new Error(e.error?.message || 'HTTP '+r.status); }
     var d = await r.json(), ans = d.choices[0].message.content;
-    kids[loadingIdx].querySelector('span').innerHTML = ans.replace(/
-/g,'<br>');
+    kids[loadingIdx].querySelector('span').innerHTML = ans.replace(/\n/g,'<br>');
   } catch(e) { kids[loadingIdx].querySelector('span').innerHTML = '❌ '+e.message; }
   btn.disabled = false; btn.textContent = '发送';
   document.getElementById('ai-chat').scrollTop = document.getElementById('ai-chat').scrollHeight;
@@ -734,8 +733,7 @@ async function askAI() {
 function addMsg(role,text) {
   var c = document.getElementById('ai-chat'), cls = role==='user' ? 'text-align:right' : '';
   var style = role==='user' ? 'display:inline-block;padding:6px 12px;background:var(--ac);color:#fff;border-radius:12px 12px 0 12px;max-width:80%;font-size:13px' : 'display:inline-block;padding:8px 14px;background:#1c2128;border-radius:12px 12px 12px 0;max-width:85%;font-size:13px;line-height:1.7';
-  c.innerHTML += '<div style="margin:8px 0;'+cls+'"><span style="'+style+'">'+text.replace(/
-/g,'<br>')+'</span></div>';
+  c.innerHTML += '<div style="margin:8px 0;'+cls+'"><span style="'+style+'">'+text.replace(/\n/g,'<br>')+'</span></div>';
   c.scrollTop = c.scrollHeight;
 }
 
