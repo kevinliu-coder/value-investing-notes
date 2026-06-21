@@ -693,7 +693,7 @@ document.querySelectorAll('.check-item input').forEach(function(cb) {
 var AI_SYSTEM = '你是段永平价值投资AI助手，精通以下9本书的全部内容：1)《穷查理宝典》(芒格)2)《聪明的投资者》(格雷厄姆)3)《巴菲特致股东的信》4)《大道：段永平投资问答录》5)《投资逻辑篇》6)《证券分析》7)《怎样选择成长股》(费雪)8)《杰克·韦尔奇自传》9)《基业长青》(柯林斯)。核心语录：买股票就是买公司、做对的事情把事情做对、不做什么比做什么更重要、本分与平常心、安全边际、能力圈。用中文回答，结合书中具体内容。';
 var API_KEY = localStorage.getItem('duan_ds_key') || '';
 var API_URL = 'https://api.deepseek.com/v1/chat/completions';
-var API_MODEL = 'deepseek-chat';
+var API_MODEL = 'deepseek-v4-flash';
 
 function saveKey() { API_KEY = document.getElementById('api-key').value.trim(); localStorage.setItem('duan_ds_key', API_KEY); document.getElementById('key-status').textContent = API_KEY ? '✅' : '🔑'; }
 try { document.getElementById('api-key').value = API_KEY; saveKey(); } catch(e) {}
