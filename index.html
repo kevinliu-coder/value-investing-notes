@@ -67,9 +67,9 @@ main{flex:1;padding:20px 24px 120px;max-width:960px;margin:0 auto;overflow-y:aut
 .sec-title:hover{background:#1c2128}
 .sec-arrow{font-size:10px;transition:transform .2s;color:var(--ac);flex-shrink:0}
 .book-sec.collapsed .sec-arrow{transform:rotate(-90deg)}
-.book-sec.collapsed .sec-
+.book-sec.collapsed .sec-body{display:none}
 .book-sec.collapsed .sec-title{border-bottom:none}
-.sec-
+.sec-body{padding:14px 18px}
 .sec-body p{margin:8px 0;font-size:14px;line-height:1.85}
 .top-bar{display:block;position:fixed;top:0;left:0;right:0;z-index:49;background:#161b22;border-bottom:1px solid var(--bd)}.top-bar-inner{padding:8px 16px;max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:8px;overflow:hidden}.tb-brand{font-size:14px;color:var(--hd);font-weight:700;white-space:nowrap;flex-shrink:0}.tb-nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;flex:1}.tb-nav::-webkit-scrollbar{display:none}.tb-nav a{font-size:11px;color:#8b949e;text-decoration:none;padding:4px 10px;border-radius:4px;white-space:nowrap;border:1px solid transparent;flex-shrink:0}.tb-nav a:hover,.tb-nav a.active{color:var(--hd);background:#1c2128;border-color:var(--ac)}
 
@@ -95,7 +95,6 @@ main{flex:1;padding:20px 24px 120px;max-width:960px;margin:0 auto;overflow-y:aut
   <div class="nav-plan">🏢 商业思维</div>
   <a href="#book7" class="nav-book" data-book="book7"><span class="nb-num">07</span> 怎样选择成长股（Common Stocks and Uncommon Profits）——菲利普·费雪</a><a href="#book8" class="nav-book" data-book="book8"><span class="nb-num">08</span> 杰克·韦尔奇自传（Jack: Straight from the Gut）</a><a href="#book9" class="nav-book" data-book="book9"><span class="nb-num">09</span> 基业长青（Built to Last）——吉姆·柯林斯</a>
   <div class="nav-plan">📅 阅读计划</div>
-  <a href="#plan" class="nav-book" data-book="plan"><span class="nb-num">📅</span> 4周阅读计划</a>
   <a href="#principles" class="nav-book" data-book="principles"><span class="nb-num">💡</span> 段永平投资哲学</a>
   <div class="nav-footer"><a href="#" onclick="toggleAI()">助手</a></div>
 </nav>
@@ -107,22 +106,7 @@ main{flex:1;padding:20px 24px 120px;max-width:960px;margin:0 auto;overflow-y:aut
     <div class="quote">"做对的事情，把事情做对。投资就是买公司，买公司就是买未来的现金流折现。" —— 段永平</div>
   </div>
 
-  <section id="plan" class="book-section active">
-    <h2>📅 4周阅读计划</h2>
-    <table class="plan-table">
-      <thead><tr><th>周次</th><th>书籍</th><th>任务</th><th>目标</th></tr></thead>
-      <tbody>
-        <tr><td>第1周</td><td>《巴菲特致股东的信》</td><td>每天1章，做笔记</td><td>建立价值投资基本框架</td></tr>
-        <tr><td>第2周</td><td>《穷查理宝典》</td><td>重点读"人类误判心理学"</td><td>掌握多元思维模型</td></tr>
-        <tr><td>第3周</td><td>《大道：段永平投资问答录》</td><td>结合前两本理论对照阅读</td><td>理论联系实战</td></tr>
-        <tr><td>第4周</td><td>《段永平投资问答录（逻辑篇）》</td><td>补充早期问答，理解演进</td><td>建立自己的投资框架</td></tr>
-        <tr><td>持续</td><td>剩余5本</td><td>每周1-2章，融会贯通</td><td>拓展商业思维和深度分析能力</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  
-    <section id="book1" class="book-section">
+  <section id="book1" class="book-section active">
       <h2>穷查理宝典</h2>
       <div class="book-toc" id="toc-book1"><h4>📑 第1章 目录</h4><ul><li><a href="#b1-s0" onclick="event.preventDefault();var e=document.getElementById('b1-s0');e.scrollIntoView({behavior:'smooth',block:'start'});if(e.classList.contains('collapsed'))e.classList.remove('collapsed')">一、本书简介</a></li><li><a href="#b1-s1" onclick="event.preventDefault();var e=document.getElementById('b1-s1');e.scrollIntoView({behavior:'smooth',block:'start'});if(e.classList.contains('collapsed'))e.classList.remove('collapsed')">二、查理·芒格传略</a></li><li><a href="#b1-s2" onclick="event.preventDefault();var e=document.getElementById('b1-s2');e.scrollIntoView({behavior:'smooth',block:'start'});if(e.classList.contains('collapsed'))e.classList.remove('collapsed')">三、芒格的生活、学习和决策方法</a></li><li><a href="#b1-s3" onclick="event.preventDefault();var e=document.getElementById('b1-s3');e.scrollIntoView({behavior:'smooth',block:'start'});if(e.classList.contains('collapsed'))e.classList.remove('collapsed')">四、芒格十一讲</a></li><li><a href="#b1-s4" onclick="event.preventDefault();var e=document.getElementById('b1-s4');e.scrollIntoView({behavior:'smooth',block:'start'});if(e.classList.contains('collapsed'))e.classList.remove('collapsed')">五、芒格主义：查理的即席谈话</a></li><li><a href="#b1-s5" onclick="event.preventDefault();var e=document.getElementById('b1-s5');e.scrollIntoView({behavior:'smooth',block:'start'});if(e.classList.contains('collapsed'))e.classList.remove('collapsed')">六、段永平评注</a></li><li><a href="#b1-s6" onclick="event.preventDefault();var e=document.getElementById('b1-s6');e.scrollIntoView({behavior:'smooth',block:'start'});if(e.classList.contains('collapsed'))e.classList.remove('collapsed')">七、实用收获</a></li></ul></div>
       <div class="book-sec" id="b1-s0">
@@ -780,16 +764,6 @@ console.log('📈 段永平价值投资学习路线已就绪');
 console.log('💡 点击右下角按钮打开AI投资助手');
 console.log('📚 左侧导航浏览9本书');
 
-// AI - DeepSeek
-var AI_KEY=localStorage.getItem('duan_ds_key')||'';
-var AI_MODEL='deepseek-v4-flash';
-var AI_URL='https://api.deepseek.com/v1/chat/completions';
-var AI_SYS='你是段永平价值投资AI助手，精通9本书。核心：买股票就是买公司、做对的事情把事情做对、安全边际、能力圈、护城河。用中文回答，结合书中内容。';
-function saveKey(){AI_KEY=document.getElementById('api-key').value.trim();localStorage.setItem('duan_ds_key',AI_KEY);document.getElementById('key-status').textContent=AI_KEY?'OK':'?'}
-try{document.getElementById('api-key').value=AI_KEY;saveKey()}catch(e){}
-function toggleAI(){document.getElementById('ai-panel').classList.toggle('open');}
-function aiMsg(r,t){var c=document.getElementById('ai-chat');var d=document.createElement('div');d.style.margin='8px 0';if(r==='user')d.style.textAlign='right';var s=document.createElement('span');s.style.display='inline-block';s.style.maxWidth='80%';s.style.fontSize='13px';if(r==='user'){s.style.background='var(--ac)';s.style.color='#fff';s.style.borderRadius='12px 12px 0 12px';s.style.padding='6px 12px'}else{s.style.background='#1c2128';s.style.borderRadius='12px 12px 12px 0';s.style.padding='8px 14px';s.style.lineHeight='1.7'}s.innerHTML=t.replace(/\n/g,'<br>');d.appendChild(s);c.appendChild(d);c.scrollTop=c.scrollHeight}
-function askAI(){var inp=document.getElementById('ai-input'),btn=document.getElementById('ai-send-btn'),q=inp.value.trim();if(!q)return;if(!AI_KEY){aiMsg('a','Please enter DeepSeek API Key');return}aiMsg('u',q);inp.value='';btn.disabled=true;btn.textContent='...';aiMsg('a','Thinking...');var kids=document.getElementById('ai-chat').children,li=kids.length-1;fetch(AI_URL,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+AI_KEY},body:JSON.stringify({model:AI_MODEL,messages:[{role:'system',content:AI_SYS},{role:'user',content:q}],temperature:0.7,max_tokens:2000})}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(d){kids[li].querySelector('span').innerHTML=d.choices[0].message.content.replace(/\n/g,'<br>')}).catch(function(e){kids[li].querySelector('span').innerHTML='Error: '+e.message}).finally(function(){btn.disabled=false;btn.textContent='Send';document.getElementById('ai-chat').scrollTop=document.getElementById('ai-chat').scrollHeight})}
 </script>
 </body>
 </html>
