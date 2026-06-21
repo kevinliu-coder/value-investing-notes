@@ -778,6 +778,17 @@ function addMsg(role,text) {
 console.log('📈 段永平价值投资学习路线已就绪');
 console.log('💡 点击右下角按钮打开AI投资助手');
 console.log('📚 左侧导航浏览9本书');
+
+// AI - DeepSeek
+var AI_KEY=localStorage.getItem('duan_ds_key')||'';
+var AI_MODEL='deepseek-v4-flash';
+var AI_URL='https://api.deepseek.com/v1/chat/completions';
+var AI_SYS='你是段永平价值投资AI助手，精通9本书。核心：买股票就是买公司、做对的事情把事情做对、安全边际、能力圈、护城河。用中文回答，结合书中内容。';
+function saveKey(){AI_KEY=document.getElementById('api-key').value.trim();localStorage.setItem('duan_ds_key',AI_KEY);document.getElementById('key-status').textContent=AI_KEY?'OK':'?'}
+try{document.getElementById('api-key').value=AI_KEY;saveKey()}catch(e){}
+function toggleAI(){document.getElementById('ai-panel').classList.toggle('open');}
+function aiMsg(r,t){var c=document.getElementById('ai-chat');var d=document.createElement('div');d.style.margin='8px 0';if(r==='user')d.style.textAlign='right';var s=document.createElement('span');s.style.display='inline-block';s.style.maxWidth='80%';s.style.fontSize='13px';if(r==='user'){s.style.background='var(--ac)';s.style.color='#fff';s.style.borderRadius='12px 12px 0 12px';s.style.padding='6px 12px'}else{s.style.background='#1c2128';s.style.borderRadius='12px 12px 12px 0';s.style.padding='8px 14px';s.style.lineHeight='1.7'}s.innerHTML=t.replace(/\n/g,'<br>');d.appendChild(s);c.appendChild(d);c.scrollTop=c.scrollHeight}
+function askAI(){var inp=document.getElementById('ai-input'),btn=document.getElementById('ai-send-btn'),q=inp.value.trim();if(!q)return;if(!AI_KEY){aiMsg('a','Please enter DeepSeek API Key');return}aiMsg('u',q);inp.value='';btn.disabled=true;btn.textContent='...';aiMsg('a','Thinking...');var kids=document.getElementById('ai-chat').children,li=kids.length-1;fetch(AI_URL,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+AI_KEY},body:JSON.stringify({model:AI_MODEL,messages:[{role:'system',content:AI_SYS},{role:'user',content:q}],temperature:0.7,max_tokens:2000})}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(d){kids[li].querySelector('span').innerHTML=d.choices[0].message.content.replace(/\n/g,'<br>')}).catch(function(e){kids[li].querySelector('span').innerHTML='Error: '+e.message}).finally(function(){btn.disabled=false;btn.textContent='Send';document.getElementById('ai-chat').scrollTop=document.getElementById('ai-chat').scrollHeight})}
 </script>
 </body>
 </html>
