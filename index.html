@@ -8,7 +8,7 @@
 <style>
 :root{--bg:#0d1117;--sf:#161b22;--bd:#30363d;--tx:#c9d1d9;--hd:#f0f6fc;--ac:#58a6ff;--gd:#3fb950;--wa:#d29922;--or:#f0883e;--pr:#a371f7;--rd:8px;--shadow:0 2px 8px rgba(0,0,0,.3)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{padding-top:48px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;font-size:15px;display:flex;min-height:100vh}
+body{padding-top:52px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;font-size:15px;display:flex;min-height:100vh}
 nav{display:none;width:280px;background:var(--sf);border-right:1px solid var(--bd);position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;padding:20px 0;z-index:10}
 nav h2{font-size:16px;color:var(--hd);padding:0 16px 16px;border-bottom:1px solid var(--bd);margin-bottom:8px}
 nav h2 small{display:block;font-size:11px;color:#8b949e;font-weight:400;margin-top:4px}
@@ -29,6 +29,7 @@ main{flex:1;padding:20px 24px 120px;max-width:960px;margin:0 auto;overflow-y:aut
 .plan-table tr:hover td{background:rgba(88,166,255,.04)}
 .book-section{display:none;padding-bottom:40px;border-bottom:1px solid var(--bd);margin-bottom:40px}
 .book-section.active{display:block}
+.book-section{scroll-margin-top:52px}
 .book-section h2{font-size:22px;color:var(--hd);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--bd)}
 .book-section h3{font-size:16px;color:var(--hd);margin:24px 0 10px}
 .book-content p{margin:12px 0}
@@ -61,7 +62,7 @@ main{flex:1;padding:20px 24px 120px;max-width:960px;margin:0 auto;overflow-y:aut
 .book-toc li{font-size:12px;line-height:1.6}
 .book-toc a{color:var(--ac);text-decoration:none}
 .book-toc a:hover{text-decoration:underline}
-.book-sec{margin:12px 0;border:1px solid var(--bd);border-radius:8px;overflow:hidden}
+.book-sec{margin:12px 0;scroll-margin-top:52px;border:1px solid var(--bd);border-radius:8px;overflow:hidden}
 .sec-title{display:flex;align-items:center;gap:8px;padding:10px 16px;margin:0;font-size:15px;color:var(--hd);background:#161b22;cursor:pointer;user-select:none;border-bottom:1px solid var(--bd);font-weight:600}
 .sec-title:hover{background:#1c2128}
 .sec-arrow{font-size:10px;transition:transform .2s;color:var(--ac);flex-shrink:0}
